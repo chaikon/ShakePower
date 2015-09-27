@@ -15,6 +15,9 @@
 		CD0233641BB66748006572B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0233621BB66748006572B4 /* LaunchScreen.storyboard */; };
 		CD02336F1BB66748006572B4 /* ShakePowerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD02336E1BB66748006572B4 /* ShakePowerTests.m */; };
 		CD02337A1BB66748006572B4 /* ShakePowerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0233791BB66748006572B4 /* ShakePowerUITests.m */; };
+		CD0233881BB704C7006572B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0233871BB704C7006572B4 /* AVFoundation.framework */; };
+		CD02338A1BB704DB006572B4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0233891BB704DB006572B4 /* AudioToolbox.framework */; };
+		CD02338D1BB70A7C006572B4 /* beisd.wav in Resources */ = {isa = PBXBuildFile; fileRef = CD02338C1BB70A7C006572B4 /* beisd.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		CD0233751BB66748006572B4 /* ShakePowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakePowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0233791BB66748006572B4 /* ShakePowerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakePowerUITests.m; sourceTree = "<group>"; };
 		CD02337B1BB66748006572B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0233871BB704C7006572B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CD0233891BB704DB006572B4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CD02338B1BB709D7006572B4 /* soundFile.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundFile.caf; sourceTree = "<group>"; };
+		CD02338C1BB70A7C006572B4 /* beisd.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beisd.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD02338A1BB704DB006572B4 /* AudioToolbox.framework in Frameworks */,
+				CD0233881BB704C7006572B4 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,8 @@
 		CD0233481BB66748006572B4 = {
 			isa = PBXGroup;
 			children = (
+				CD0233891BB704DB006572B4 /* AudioToolbox.framework */,
+				CD0233871BB704C7006572B4 /* AVFoundation.framework */,
 				CD0233531BB66748006572B4 /* ShakePower */,
 				CD02336D1BB66748006572B4 /* ShakePowerTests */,
 				CD0233781BB66748006572B4 /* ShakePowerUITests */,
@@ -105,6 +116,8 @@
 				CD0233581BB66748006572B4 /* AppDelegate.m */,
 				CD02335A1BB66748006572B4 /* ViewController.h */,
 				CD02335B1BB66748006572B4 /* ViewController.m */,
+				CD02338B1BB709D7006572B4 /* soundFile.caf */,
+				CD02338C1BB70A7C006572B4 /* beisd.wav */,
 				CD02335D1BB66748006572B4 /* Main.storyboard */,
 				CD0233601BB66748006572B4 /* Assets.xcassets */,
 				CD0233621BB66748006572B4 /* LaunchScreen.storyboard */,
@@ -246,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD02338D1BB70A7C006572B4 /* beisd.wav in Resources */,
 				CD0233641BB66748006572B4 /* LaunchScreen.storyboard in Resources */,
 				CD0233611BB66748006572B4 /* Assets.xcassets in Resources */,
 				CD02335F1BB66748006572B4 /* Main.storyboard in Resources */,
@@ -414,7 +428,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ShakePower/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = azalsar.ShakePower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,7 +441,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ShakePower/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = azalsar.ShakePower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
